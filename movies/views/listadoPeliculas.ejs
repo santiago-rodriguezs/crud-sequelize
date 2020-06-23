@@ -1,0 +1,21 @@
+<%- include('header') -%>
+    <h1>Listado de películas</h1>
+    <form action="/peliculas" method='POST'>
+        <input type="text" name="search">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul>
+        <%for( let i = 0; i < peliculas.length; i++) { %>
+            <li>
+                <a href="/peliculas/detalle/<%= peliculas[i].id %>">
+                <%= peliculas[i].title %>
+                </a>
+            </li>
+        <%}%>
+    </ul>
+    <% if(total != undefined) {%>
+    <% for(var i = 1; i <= total/5+1; i++) {%>
+        <a href="/peliculas/<%= i %>"><%= i %></a>
+    <% } %>
+    <% } %>
+<%- include('footer') -%>

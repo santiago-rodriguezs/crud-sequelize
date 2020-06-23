@@ -1,0 +1,26 @@
+<%- include('header') -%>
+<h1>Crear nueva actuación</h1>
+<form action="/crear-nueva-actuacion" method='POST'>
+<div>
+    <label for="">Actor</label>
+    <select name='actor_id'> 
+        <% for( let i = 0; i < actores.length; i++) {%>
+        <option value="<%= actores[i].id %>">
+            <%= actores[i].first_name %> <%= actores[i].last_name %>
+        </option>
+        <% } %>
+    </select>
+</div>
+<div>ß
+    <label for="">Pelicula</label>
+    <select name='movie_id'> 
+        <% for( let i = 0; i < peliculas.length; i++) {%>
+        <option value="<%= peliculas[i].id %>">
+            <%= peliculas[i].title %>
+        </option>
+        <% } %>
+    </select>
+</div>
+<button type="submit">Crear</button>
+</form>
+<%- include('footer') -%>

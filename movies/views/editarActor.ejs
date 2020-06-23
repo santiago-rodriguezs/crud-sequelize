@@ -1,0 +1,14 @@
+<%- include('header') -%>
+<h1>Editar actor</h1>
+<form action="/actores/editar/<%= actor.id %>" method='POST'>
+<div>
+    <label for="">Nombre</label>
+    <input type="text" value='<%= actor.first_name %>' name='nombre'>
+</div>
+<div>
+    <label for="">Apellido</label>
+    <input type="text" value='<%= actor.last_name %>'  name='apellido'>
+</div>
+<button type="submit">Editar</button>
+</form>
+<%- include('footer') -%>

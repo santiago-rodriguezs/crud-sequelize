@@ -1,0 +1,14 @@
+<%- include('header') -%>
+<h1>Crear actor</h1>
+<form action="/actores/crear" method='POST'>
+<div>
+    <label for="">Nombre</label>
+    <input type="text" name='nombre'>
+</div>
+<div>
+    <label for="">Apellido</label>
+    <input type="text" name='apellido'>
+</div>
+<button type="submit">Crear</button>
+</form>
+<%- include('footer') -%>
